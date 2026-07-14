@@ -1,0 +1,79 @@
+# ============================
+# FastAPI Backend
+# ============================
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+pydantic
+pydantic-settings
+
+# ============================
+# Database
+# ============================
+sqlalchemy
+psycopg2-binary
+alembic
+
+# ============================
+# Authentication
+# ============================
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+
+# ============================
+# LangChain
+# ============================
+langchain
+langchain-community
+langchain-core
+langgraph
+
+# ============================
+# Embeddings
+# ============================
+sentence-transformers
+transformers
+torch
+
+# ============================
+# Vector Database
+# ============================
+faiss-cpu
+
+# ============================
+# PDF / Document Processing
+# ============================
+pypdf
+python-docx
+pandas
+openpyxl
+unstructured
+
+# ============================
+# LLM (Local)
+# ============================
+ollama
+
+# ============================
+# HTTP
+# ============================
+requests
+httpx
+
+# ============================
+# Utilities
+# ============================
+numpy
+tqdm
+
+# ============================
+# Logging
+# ============================
+loguru
+
+# ============================
+# Environment
+# ============================
+python-dotenv

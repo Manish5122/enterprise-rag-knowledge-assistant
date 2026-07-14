@@ -1,22 +1,36 @@
 import streamlit as st
-import requests
+
+from components.login import login_screen
+from components.signup import signup_screen
+from components.chat_ui import chat_screen
+
+
+def load_css():
+    with open("assets/styles.css") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
 
 st.set_page_config(
-    page_title="Enterprise RAG Knowledge Assistant",
+    page_title="Enterprise RAG Assistant",
     page_icon="🤖",
-    layout="wide"
+    layout="wide",
 )
 
-st.title("🤖 Enterprise RAG Knowledge Assistant")
+if "page" not in st.session_state:
+    st.session_state.page = "login"
 
-try:
-    response = requests.get("http://127.0.0.1:8000")
-    response.raise_for_status()
-    data = response.json()
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
 
-    st.success("Backend Connected Successfully")
-    st.json(data)
+if st.session_state.logged_in:
+    chat_screen()
 
-except Exception as e:
-    st.error("Backend is not running")
-    st.code(str(e))
+elif st.session_state.page == "login":
+    login_screen()
+
+else:
+    signup_screen()
