@@ -38,12 +38,12 @@ transformers
 torch
 
 # ============================
-# Vector Database
+# Vector Database 
 # ============================
 faiss-cpu
 
 # ============================
-# PDF / Document Processing
+# PDF / Document Processing 
 # ============================
 pypdf
 python-docx
@@ -52,8 +52,8 @@ openpyxl
 unstructured
 
 # ============================
-# LLM (Local)
-# ============================
+# LLM 
+# ========================
 ollama
 
 # ============================
@@ -72,8 +72,3 @@ tqdm
 # Logging
 # ============================
 loguru
-
-# ============================
-# Environment
-# ============================
-python-dotenv
